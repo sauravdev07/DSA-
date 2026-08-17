@@ -81,4 +81,28 @@ int main(){
     }
     else 
     cout<<"Element not present in array";
-}
+} 
+
+// 5. take the input from the user and print second smallest element of array....
+#include<iostream>
+#include<climits>
+using namespace std;
+int main(){
+    int small[6];
+    int smallest=INT_MAX;
+     int secsmallest = INT_MAX;
+    for(int i=0;i<6;i++){
+        cout<<"Enter the value : ";
+        cin>>small[i];
+    }
+    for(int i=0;i<6;i++){
+        if(small[i]<smallest)
+        smallest = small[i];
+    }
+    
+    for(int i=0;i<6;i++){
+        if(small[i]<secsmallest && small[i]!=smallest)
+        secsmallest=small[i];
+    }
+    cout<<"Second smallest is "<<secsmallest;
+}  
