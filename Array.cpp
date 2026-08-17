@@ -1,4 +1,4 @@
-//Take marks of student from the user and store it in array named marks if marks is less than 35 then print out the index of respective marks ...
+// 1.Take marks of student from the user and store it in array named marks if marks is less than 35 then print out the index of respective marks ...
 #include<iostream>
 using namespace std;
 int main(){
@@ -12,7 +12,9 @@ int main(){
         cout<<i<<" ";
     }
 }
-// take the value from user and find the sum of all the element of an array
+
+
+//2. take the value from user and find the sum of all the element of an array
 #include<iostream>
 using namespace std;
 int main(){
@@ -28,7 +30,9 @@ int main(){
     }
     cout<<"Sum of all the element of array is "<<add;
 }
-// take the value from the user and print the second largest element of the array 
+
+
+// 3.take the value from the user and print the second largest element of the array 
 #include<iostream>
 #include<climits>
 using namespace std;
@@ -54,4 +58,27 @@ int main(){
         
     }
      cout<<secmax;
+}
+
+// 4.take the value from the user and match whether it is present in the array 
+#include<iostream>
+using namespace std;
+int main(){
+    int x;
+    cout<<"Enter the value of x: ";
+    cin>>x;
+    int arr[5];
+    bool flag = false;
+    for(int i =0;i<5;i++){
+        cout<<"Enter the element: ";
+        cin>>arr[i];
+    }
+    for(int i=0; i<5;i++){
+        if(arr[i]==x) flag = true;
+    }
+    if(flag==true){
+        cout<<"Element present in array";
+    }
+    else 
+    cout<<"Element not present in array";
 }
