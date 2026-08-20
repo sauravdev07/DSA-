@@ -152,7 +152,7 @@ int main(){
         cout<<"Array is unsorted";
 } 
 
-// take the input from the user and check how many times a element occurs in array 
+//8. take the input from the user and check how many times a element occurs in array 
 #include<iostream>
 using namespace std;
 
