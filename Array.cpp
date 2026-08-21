@@ -275,3 +275,139 @@ int main()
     return 0;
 }
 
+// 11.take the input from user and print the sum of all the element of array 
+#include<iostream>
+using namespace std;
+int main(){
+int arr[6];
+int sum=0;
+    for(int i = 0;i<6;i++){
+        cout<<"Enter the element at index "<<i<<endl;
+        cin>>arr[i];
+    }
+    for(int i=0;i<6;i++){
+        sum+= arr[i];
+    }
+    cout<<"The Sum of all the element of array is "<< sum ;
+} 
+
+// 12. take the input and print the sum of index of all the even element 
+#include<iostream>
+using namespace std;
+int main(){
+int arr[6];
+int sum=0;
+    for(int i = 0;i<6;i++){
+        cout<<"Enter the element at index "<<i<<endl;
+        cin>>arr[i];
+    }
+    for(int i=0;i<6;i++){
+       if (arr[i]%2==0)
+        sum+= arr[i];
+    }
+    cout<<"The Sum of all the  even element of array is "<< sum ;
+}
+
+// 13. take the element from the user and sort it 
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+int arr[6];
+int sum=0;
+    for(int i = 0;i<6;i++){
+        cout<<"Enter the element at index "<<i<<endl;
+        cin>>arr[i];
+    }
+    sort(arr,arr+6);
+    for(int i = 0;i<6;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+
+//14. take an array from the user and reverse the array 
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+int size = 6;
+int arr[size];
+int sum=0;
+    for(int i = 0;i<size;i++){
+        cout<<"Enter the element at index "<<i<<endl;
+        cin>>arr[i];
+    }
+     for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
+    for(int i =0;i<size/2;i++){
+     int x=arr[i];
+     arr[i]=arr[size-1-i];
+     arr[size-1-i]=x;
+    }
+      
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+} 
+
+//15. take the input from the user and move the all zero element at the end 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int size = 6;
+    int arr[size];
+
+    for (int i = 0; i < size; i++) {
+        cout << "Enter the element at index " << i << endl;
+        cin >> arr[i];
+    }
+
+    int nonZeroPos = 0; 
+    for (int i = 0; i < size; i++) {
+        if (arr[i] != 0) {
+            arr[nonZeroPos] = arr[i];
+            nonZeroPos++;
+        }
+    }
+
+    while (nonZeroPos < size) {
+        arr[nonZeroPos] = 0;
+        nonZeroPos++;
+    }
+    cout << "Array after moving zeros: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+} 
+//16. take the input from the user and reverse the array in a way that all zero element should be in the last 
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+int size = 6;
+int arr[size];
+int sum=0;
+    for(int i = 0;i<size;i++){
+        cout<<"Enter the element at index "<<i<<endl;
+        cin>>arr[i];
+    }
+    sort(arr,arr+size);
+        for (int i =0;i<size;i++){
+        cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    for(int i = 0;i<size/2;i++){
+        int x=arr[i];
+        arr[i]=arr[size-1-i];
+        arr[size-1-i]=x;
+    }
+    for (int i =0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+
