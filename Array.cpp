@@ -234,5 +234,44 @@ int main()
 
 }
 
+// 10.  to check the first occurance of any element in the array and print their index
 
+#include <iostream>
+using namespace std;
+int main(){
+    int x=6;
+    int arr[5]={1,6,3,45,6};
+    for(int i =0;i<5;i++){
+        if(arr[i]==x){
+        cout<<i<<endl;
+        break;
+            
+        }
+    }
+} 
+
+// 11. TO check first and last elemrnt occurance of any element of array 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x=4;
+    int first=0;
+    int last =0;
+    int arr[5]={1,2,4,5,4};
+    for(int i =0;i<5;i++){
+        if(arr[i]==x){
+            if(first==0){
+                first=i;
+            }
+        }
+        last = i;
+       
+    } 
+    cout<<first<<endl<<last;
+  
+
+    return 0;
+}
 
