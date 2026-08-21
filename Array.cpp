@@ -216,5 +216,23 @@ int main() {
     return 0;
 }
 
+// 9. To check how many increasing pair in an array
+
+#include <iostream>
+using namespace std;
+int count=0;
+
+int main()
+{
+  int arr[7]={1,2,3,45,67,89,23};
+  for(int i= 0;i<7;i++){
+      for(int j=i+1;j<6;j++)
+      if(arr[i]<arr[i-1])
+      count+=1;
+  }
+  cout<<count;
+
+}
+
 
 
