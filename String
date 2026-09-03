@@ -1,4 +1,4 @@
-// take two string and check where it is anagram or not 
+// 1. take two string and check where it is anagram or not 
 #include <iostream>
 #include<string>
 #include<algorithm>
@@ -13,4 +13,105 @@ int main(){
     }
     else 
     cout<<"It is not the anagram";
+}
+
+//2. take a string that contain only lowercase and count the maximum number of character 
+#include<iostream>
+#include<vector>
+using namespace std ;
+int main(){
+    string s;
+    cout<<"Enter your string: ";
+    cin>>s;
+    vector<int>arr(26,0);
+    for(int i =0;i<s.size();i++){
+        int ch= s[i];
+        int ascii =(int)ch;
+        arr[ascii-97]++;
+    }
+    int max=0;
+    for(int i=0;i<26;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    for(int i=0;i<26;i++){
+        if(arr[i]==max){
+            int ascii=i+97;
+            char ch=(char)ascii;
+            cout<<ch<<" "<<max;
+        }
+    }
+} 
+
+// 3. take a string print all the word in different line using string stream ;
+#include<iostream>
+#include<string>
+#include<sstream>
+using namespace std;
+int main(){
+    string str="saurav is a genious guy";
+    stringstream ss(str);
+    string temp;
+
+    while(ss>>temp){
+        cout<<temp<<endl;
+    }
+}
+
+// 4. print the most occuring word of a string 
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main(){
+    string str="saurav is a genious guy and a very kind hearted";
+    stringstream ss(str);
+    string temp;
+    vector<string>v;
+    
+    while(ss>>temp){
+        v.push_back(temp);
+    }
+    sort(v.begin(),v.end());
+    int maxcount=1;
+    int count=1;
+    for(int i=1;i<v.size();i++){
+        if(v[i]==v[i-1]){
+            count++;
+        }else
+            count =1;
+        maxcount = max(maxcount,count);
+    }
+    count = 1;
+    for(int i =1;i<v.size();i++){
+        if(v[i]==v[i-1]){
+            count++;
+        }else
+            count =1;
+        if(count==maxcount){
+            cout<<v[i]<<" "<<maxcount<<endl;
+        }
+    }
+
+}
+
+// 5. print the max number from the string 
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+ string arr[5];
+ 
+ for(int i =0;i<5;i++){
+     cout<<"Enter the string value: ";
+     cin>>arr[i];
+ }
+ int max=stoi(arr[0]);
+ for(int i =1;i<5;i++){
+     int x=stoi(arr[i]);
+     if(x>max){
+         max=x;
+     }
+ }
+cout<<max;
 }
