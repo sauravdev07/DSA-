@@ -469,3 +469,35 @@ int main(){
         cout<<arr[i];
     }
 }
+
+// 20. Rotate array by k to the left
+#include<iostream>
+using namespace std;
+int main(){
+    int k;
+    cout<<"Enter the number of moving number: ";
+    cin>>k;
+    int size;
+    cout<<" Enter the size of array: ";
+    cin>>size;
+    int arr[size];
+    int temp[k];
+    for(int i =0;i<size;i++){
+        cout<<"Enter the value in array: ";
+        cin>>arr[i];
+    }
+    for(int i=0;i<k;i++){
+        temp[i]=arr[i];
+    }
+    for(int i =k;i<size;i++){
+        arr[i-k]=arr[i];
+    }
+    int j=0;
+    for(int i=size-k;i<size;i++){
+        arr[i]=temp[j];
+        j++;
+    }
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+}
