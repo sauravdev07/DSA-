@@ -501,3 +501,26 @@ int main(){
         cout<<arr[i]<<" ";
     }
 }
+
+// 21. move the all zero at the end of the array
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+    int arr[]={1,3,0,2,0};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int idx=0;
+    for(int i =0;i<n;i++){
+        if(arr[i]!=0){
+            arr[idx]=arr[i];
+            idx++;
+        }
+    }
+    while(idx<n){
+        arr[idx]=0;
+        idx++;
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+}
